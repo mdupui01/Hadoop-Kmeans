@@ -1,5 +1,10 @@
 #!/usr/bin/python
 
+'''
+This is the mapper script for the kmeans algorithm. Input must be a .txt
+Each line has to be coordinates separated by a comma.
+'''
+
 import sys
 import math
 
@@ -10,14 +15,6 @@ mean2 = [30, 15]
 mean1_old = mean1
 mean2_old = mean2
 
-X = []
-Y = []
-muX = []
-muY = []
-Xs_mean1 = []
-Ys_mean1 = []
-Xs_mean2 = []
-Ys_mean2 = []
 for i in range(20):
     Xs_mean1 = []
     Ys_mean1 = []
@@ -25,6 +22,7 @@ for i in range(20):
     Ys_mean2 = []
     
     for line in input:
+        
         data = line.strip().split(",")
         x, y = data
         
